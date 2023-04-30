@@ -15,12 +15,39 @@ div {
   padding: 4px;
 }
 
+img {
+  display: inline-block;
+}
+
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
 .right {
   float: right;
+}
+
+.div-flex {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.div-flex div, .div-flex button {
+  width: 100%;
 }
 
 /* Element styling */
@@ -29,8 +56,39 @@ h1, h2, h3, h4, h5, h6, p {
   max-width: 800px;;
 }
 
-.div-flex {
+#div-footer {
+  text-align: center;
+}
+
+.icon-event {
+  font-size: 1.8rem;
+}
+
+.btn-social img, .btn-social span.icon-social, .btn-link span.icon-link {
+  padding: 3px;
+  width: 30px;
+  height: 30px;
+  font-size: 32px;
+  vertical-align: middle;
+}
+
+.btn-social span, .btn-link span {
+  width: 100%;
+}
+
+.btn-social, .btn-link {
   display: flex;
-  flex-direction: row;
-  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: 40px;
+  font-size: 16px;
+}
+
+.a-link {
+  text-decoration: none;
+}
+
+.btn-link {
+  width: 100%;
 }
