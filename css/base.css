@@ -9,12 +9,6 @@ body {
   box-sizing: border-box;
 }
 
-div {
-  border: 1px solid #000;
-  margin: 4px;
-  padding: 4px;
-}
-
 img {
   display: inline-block;
 }
@@ -28,11 +22,11 @@ h1 {
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .right {
