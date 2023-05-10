@@ -1,0 +1,50 @@
+#_rem-popup-ov {
+  position: fixed;
+  z-index: 800;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  margin: 0;
+  background: #0000009f;
+  display: block;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  transition: all 0.32s, height 0s;
+}
+
+#_rem-popup-ov.hidden {
+  opacity: 0;
+  height: 0%;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  transition: all 0.32s, height 0.0s 0.32s;
+}
+
+#_rem-popup-ov-inner {
+  position: fixed;
+  z-index: 801;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  margin: 0;
+}
+
+#_rem-popup-ov.hidden #_rem_popup-ov-inner {
+  display: none;
+}
+
+#_rem-popup-content {
+  z-index: 802;
+  position: relative;
+  margin: auto;
+  margin-top: 10%;
+  width: 85%;
+  max-width: 800px;
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 8px #222;
+}
+
