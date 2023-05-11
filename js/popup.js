@@ -5,12 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 export function create(html) {
-  document.getElementById('_rem-popup-ov').classList.remove('hidden');
-  document.getElementById('_rem-popup-content').classList.remove('hidden');
+  document.getElementById('_rem-popup-ov').style.display = 'block';
   document.getElementById('_rem-popup-content').innerHTML = html;
+  setTimeout(() => {
+    document.getElementById('_rem-popup-ov').classList.remove('hidden');
+    document.getElementById('_rem-popup-content').classList.remove('hidden');
+  }, 10);
 }
 
 export function dismiss() {
   document.getElementById('_rem-popup-ov').classList.add('hidden');
   document.getElementById('_rem-popup-content').classList.add('hidden');
+  setTimeout(() => {
+    document.getElementById('_rem-popup-ov').style.display = 'none';
+  }, 321);
 }

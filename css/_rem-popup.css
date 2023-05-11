@@ -7,7 +7,7 @@
   height: 100%;
   margin: 0;
   background: #0000009f;
-  display: block;
+  display: none;
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   transition: all 0.32s, height 0s;
@@ -22,7 +22,7 @@
 }
 
 #_rem-popup-ov-inner {
-  position: fixed;
+  position: absolute;
   z-index: 801;
   left: 0;
   top: 0;
