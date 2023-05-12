@@ -5,3 +5,13 @@
 .fc-event {
   cursor: pointer;
 }
+
+#a-calendar-back {
+  border: none;
+  width: 32px;
+}
+
+#a-calendar-back span {
+  font-size: 28px;
+  vertical-align: text-bottom;
+}
