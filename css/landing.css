@@ -3,3 +3,58 @@
   margin: 4px;
   padding: 4px;
 }
+
+.a-social:hover, .a-social:focus-visible {
+  color: #fff;
+}
+
+.a-social:hover img, .a-social:focus-visible img {
+  filter: invert(1);
+}
+
+#a-social-discord:hover, #a-social-discord:focus-visible {
+  background: #5865f2;
+}
+
+#a-social-discord:active {
+  background: #6671ed;
+}
+
+#a-social-groupme:hover, #a-social-groupme:focus-visible {
+  background: #00aff0;
+}
+
+#a-social-groupme:active {
+  background: #21bcf4;
+}
+
+#a-social-email:hover, #a-social-email:focus-visible {
+  background: #21314d;
+}
+
+#a-social-email:active {
+  background: #3c4f71;
+}
+
+.a-social img, .a-social span.icon-social, .a-link span.icon-link {
+  padding: 3px;
+  width: 30px;
+  height: 30px;
+  font-size: 32px;
+  vertical-align: middle;
+  transition: filter 0.24s;
+}
+
+.a-social span, .a-link span {
+  width: 100%;
+}
+
+.a-social, .a-link {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: 40px;
+  font-size: 16px;
+}

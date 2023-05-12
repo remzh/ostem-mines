@@ -1,6 +1,9 @@
 /* General styling */
-/* Rainbow: https://unsplash.com/photos/x0tB8fltGqU */
-/* https://unsplash.com/photos/6R3dGQJ3qOI */
+/* Rainbow: https://unsplash.com/photos/6R3dGQJ3qOI */
+
+:root {
+  --var-border-radius: 4px;
+}
 
 html {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -21,10 +24,19 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1 {
   font-size: 2.2rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.3rem;
 }
 
-h2, .p2 {
+h2 {
+  margin-top: 0.4rem;
+  margin-bottom: 0.2rem;
   font-size: 1.5rem;
+}
+
+.p2 {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 h3 {
@@ -35,20 +47,21 @@ p {
   font-size: 1.1rem;
 }
 
-button {
-  /* background: linear-gradient(45deg, #fee, #efe, #eef); */
+button, .a-btn {
+  text-align: center;
   background: none;
   border: 1px solid #000;
+  color: #000;
   transition: all 0.24s;
 }
 
-button:not(:disabled):hover {
+button:not(:disabled):hover, .a-btn:hover {
   cursor: pointer;
-  background: #ccfff6ad
+  background: #dbfffd7c;
 }
 
-button:not(:disabled):active {
-  background: #bcffe3ad
+button:not(:disabled):active, .a-btn:active {
+  background: #bcfff07c;
 }
 
 .right {
@@ -59,7 +72,6 @@ button:not(:disabled):active {
   display: flex;
   align-items: flex-start;
   flex-direction: row;
-  flex-grow: 1;
 }
 
 .div-flex div, .div-flex button {
@@ -96,27 +108,6 @@ button:not(:disabled):active {
   font-size: 1.8rem;
 }
 
-.btn-social img, .btn-social span.icon-social, .btn-link span.icon-link {
-  padding: 3px;
-  width: 30px;
-  height: 30px;
-  font-size: 32px;
-  vertical-align: middle;
-}
-
-.btn-social span, .btn-link span {
-  width: 100%;
-}
-
-.btn-social, .btn-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  height: 40px;
-  font-size: 16px;
-}
-
 .a-link {
   text-decoration: none;
 }
@@ -127,8 +118,7 @@ button:not(:disabled):active {
 
 @media screen and (min-width: 820px) {
   #div-outer {
-    margin-top: 20px;
-    border-radius: 4px;
-  }
-  
+    margin: 20px auto;
+    border-radius: var(--var-border-radius);
+  } 
 }
