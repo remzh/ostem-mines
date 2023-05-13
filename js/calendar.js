@@ -37,8 +37,8 @@ function formatDate(start, end, allDay) {
 function showEvent(event) {
   import('/js/popup.js')
     .then((module) => {
-      module.create(`<h1>${event.title}</h1><p><span class='p2'>${formatDate(event.start, event.end, event.allDay)}</span></p><p id='_tmp_cal_eventDesc'></p>`);
-      document.getElementById('_tmp_cal_eventDesc').innerHTML = event.extendedProps.desc;
+      module.create(`<h1>${event.title}</h1><p><span class='p2'>${formatDate(event.start, event.end, event.allDay)}</span></p><hr/><p id='_tmp_cal_eventDesc'></p>`);
+      document.getElementById('_tmp_cal_eventDesc').innerHTML = event.extendedProps.desc ? event.extendedProps.desc : `<i>No description provided.</i>`;
       document.getElementById('_tmp_cal_eventDesc').removeAttribute('id');
     })
     .catch((err) => {

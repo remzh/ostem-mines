@@ -15,3 +15,15 @@
   font-size: 28px;
   vertical-align: text-bottom;
 }
+
+#div-loading {
+  padding: 16px;
+}
+
+#div-loading p span {
+  vertical-align: bottom;
+}
+
+#div-calendar {
+  margin-top: 12px;
+}
