@@ -1,4 +1,4 @@
-import { showEvent } from './cal-shared';
+import { showEvent } from './cal-shared.js';
 
 document.addEventListener('DOMContentLoaded', async function() {
   let eventInfo = await fetch('https://script.google.com/macros/s/AKfycbwgJlfDVGs_8gIzpW6Qy0umvs3xe42jazp2uASmbM1cvYmeG1et69Ak3pulqAb4zf7u/exec').then(r => r.json());

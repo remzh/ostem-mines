@@ -1,3 +1,11 @@
+:root {
+  --fc-list-event-hover-bg-color: #d5e1ebd7;
+}
+
+.fc .fc-list-event td {
+  transition: background-color 0.24s;
+}
+
 .fc .fc-list-table tbody > tr:first-child th, .fc .fc-list-sticky .fc-list-day > * {
   z-index: 1;
 }

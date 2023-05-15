@@ -1,6 +1,12 @@
-#div-events, #div-events div {
+#div-events > a {
+  padding: 4px 6px;
+  border-radius: var(--var-border-radius);
+}
+
+#div-events-inner div {
+  border-radius: var(--var-border-radius);
   border: 1px solid #000;
-  margin: 4px;
+  margin: 6px 0;
   padding: 4px;
 }
 
