@@ -6,7 +6,6 @@
   <link rel='stylesheet' href='css/base.css'/>
   <link rel='stylesheet' href='css/landing.css'/>
   <script type='module' async src='js/landing.js'></script>
-  <script type='module' async src='js/popup.js'></script>
 </head>
 <body>
   <div id='div-bg'></div>
@@ -15,17 +14,12 @@
     <h2>Upcoming Events</h2>
     <p><i>Select an event for details and RSVP links.</i></p>
     <div id='div-events'>
-      <p>Next Event</p>
-      <div>
-        <p class='p2'>Community Check-In <span class='icon-event material-symbols-rounded right'>calendar_add_on</span><span class='icon-event material-symbols-rounded right'>restaurant</span></p>
-        <p><span>Wed 9/6, 7:00 - 9:15 pm</span> <span class='right'>BB W250</span></p>
+      <div id='div-events-inner'>
+        <div id='div-loading'>
+          <p><span class='icon-spin material-symbols-rounded'>cached</span> Loading upcoming events...</p>
+        </div>
       </div>
-      <p>Next Recurring Meeting</p>
-      <div>
-        <p class='p2'>General Meeting <span class='icon-event material-symbols-rounded right'>calendar_add_on</span></p>
-        <p><span>Wed 9/6, 5:00 - 6:15 pm</span> <span class='right'>BB W250</span></p>
-      </div>
-      <a href='calendar.html'>Full Event Calendar</a> <a href='#' class='right'>Icon Guide</a>
+      <a class='a-btn' href='calendar.html'>Full Event Calendar</a> <a class='a-btn right' href='#'>Icon Guide</a>
     </div>
     <h2>Stay Connected</h2>
     <div id='div-social-wrapper' class='div-flex'>
@@ -39,7 +33,7 @@
       <a class='a-link a-btn' role='button' href='https://go.itsrem.org/ostem/spark'><span class='icon-link material-symbols-rounded'>book</span> <span>Spectrum Spark</span></a>
     </div>
     <div id='div-footer'>
-      <p>Last Updated: 5.13.2023 <span class='right'><a href='#'>Accessibility</a> &ThickSpace; <a href='#'>About</a></span></p>
+      <p>oSTEM @ Mines <span class='right'><a href='#'>Accessibility</a> &ThickSpace; <a href='#'>About</a></span></p>
     </div>
   </div>
 </body>

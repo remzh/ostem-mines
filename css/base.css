@@ -123,6 +123,14 @@ button:not(:disabled):active, .a-btn:active {
   background-position: center;
 }
 
+#div-loading {
+  padding: 16px;
+}
+
+#div-loading p span {
+  vertical-align: bottom;
+}
+
 .icon-event {
   font-size: 1.8rem;
 }
