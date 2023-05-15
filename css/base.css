@@ -2,7 +2,9 @@
 /* Rainbow: https://unsplash.com/photos/6R3dGQJ3qOI */
 
 :root {
-  --var-border-radius: 6px;
+  --var-border-radius: 4px;
+  --var-border-radius-lg: 8px;
+  --var-accent-color: #6f216a;
 }
 
 html {
@@ -61,13 +63,23 @@ button, .a-btn {
   transition: all 0.24s;
 }
 
-button:not(:disabled):hover, .a-btn:hover {
+button:not(:disabled):hover, .a-btn:hover, .a-btn:focus {
   cursor: pointer;
-  background: #dbfffd7c;
+  background: #088877b8;
+  color: #fff;
 }
 
 button:not(:disabled):active, .a-btn:active {
-  background: #bcfff07c;
+  background: #067457b8;
+}
+
+a {
+  text-decoration: none;
+  color: var(--var-accent-color)
+}
+
+a:not(.a-btn):hover, a:not(.a-btn):focus-visible {
+  text-decoration: underline;
 }
 
 .right {
@@ -146,6 +158,6 @@ button:not(:disabled):active, .a-btn:active {
 @media screen and (min-width: 820px) {
   #div-outer {
     margin: 20px auto;
-    border-radius: var(--var-border-radius);
+    border-radius: var(--var-border-radius-lg);
   } 
 }

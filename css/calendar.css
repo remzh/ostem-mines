@@ -17,6 +17,11 @@
 #a-calendar-back {
   border: none;
   width: 32px;
+  margin-left: -8px;
+  margin-bottom: -2px;
+  padding-left: 6px;
+  padding-bottom: 4px;
+  border-top-left-radius: var(--var-border-radius-lg);
 }
 
 #a-calendar-back span {
