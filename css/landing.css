@@ -4,6 +4,15 @@
   padding: 4px;
 }
 
+#div-social-wrapper {
+  border: 1px solid #000;
+  border-radius: var(--var-border-radius);
+}
+
+#div-social-wrapper .a-social:not(:last-child) {
+  border-right: 1px solid #000;
+}
+
 .a-social:hover, .a-social:focus-visible {
   color: #fff;
 }
@@ -57,4 +66,17 @@
   padding: 0;
   height: 40px;
   font-size: 16px;
+}
+
+.a-social {
+  border: none;
+}
+
+.a-link {
+  border-radius: var(--var-border-radius);
+  margin-top: 8px;
+}
+
+#div-footer {
+  padding: 12px 0;
 }
