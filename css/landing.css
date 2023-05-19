@@ -1,3 +1,12 @@
+a {
+  text-decoration: none;
+  color: var(--var-accent-color-alt)
+}
+
+a:not(.a-btn):hover, a:not(.a-btn):focus-visible {
+  text-decoration: underline;
+}
+
 #div-events > a {
   padding: 4px 6px;
   border-radius: var(--var-border-radius);
@@ -23,7 +32,7 @@
   color: #fff;
 }
 
-.a-social:hover img, .a-social:focus-visible img {
+.a-social:hover img, .a-social:focus img {
   filter: invert(1);
 }
 

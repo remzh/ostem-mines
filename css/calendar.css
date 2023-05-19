@@ -29,6 +29,23 @@
   vertical-align: text-bottom;
 }
 
+#btn-calendar-sub {
+  border: none;
+  /* width: 180px; */
+  margin-right: -8px;
+  margin-bottom: -2px;
+  padding: 0 8px 6px;
+  border-top-right-radius: var(--var-border-radius-lg);
+  font-size: 20px;
+  /* border-bottom: 1px solid #000;
+  border-left: 1px solid #000; */
+}
+
+#btn-calendar-sub span {
+  font-size: 26px;
+  vertical-align: text-bottom;
+}
+
 #div-calendar {
   margin-top: 12px;
 }
