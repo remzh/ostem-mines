@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
 export function create(html) {
   document.getElementById('_rem-popup-ov').style.display = 'block';
   document.getElementById('_rem-popup-content').innerHTML = html;
+  if (document.getElementById('_rem-popup-dismiss')) {
+    document.getElementById('_rem-popup-dismiss').addEventListener('click', dismiss);
+  }
   setTimeout(() => {
     document.getElementById('_rem-popup-ov').classList.remove('hidden');
     document.getElementById('_rem-popup-content').classList.remove('hidden');

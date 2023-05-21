@@ -15,13 +15,17 @@ document.addEventListener('DOMContentLoaded', async function() {
       right: 'listMonth,dayGridMonth'
     },
     eventClick: function(info) {
-      // alert('Event: ' + info.event.title);
-      // alert('Coordinates: ' + info.jsEvent.pageX + ',' + info.jsEvent.pageY);
-      // alert('View: ' + info.view.type);
       console.log(info);
-      showEvent(info.event);
-  
-      // info.el.style.borderColor = 'red';
+      let {title, start, end, allDay} = info.event;
+      let {desc, loc} = info.event.extendedProps;
+      showEvent({
+        title, 
+        start,
+        end,
+        desc,
+        loc,
+        allDay
+      });
     }  
   });
 
@@ -40,7 +44,6 @@ document.addEventListener('DOMContentLoaded', async function() {
   if (button) {
     button.addEventListener('click', () => atcb_action(config, button));
   }
-
 
   calendar.render();
 });

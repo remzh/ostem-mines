@@ -48,3 +48,7 @@
   box-shadow: 2px 2px 8px #222;
 }
 
+#_rem-popup-dismiss {
+  padding: 8px 12px;
+  font-size: 18px;
+}
