@@ -48,7 +48,9 @@
   box-shadow: 2px 2px 8px #222;
 }
 
-#_rem-popup-dismiss {
-  padding: 8px 12px;
+#_rem-popup-dismiss, ._rem-popup-action {
+  margin: 12px 0 4px;
+  border-radius: var(--var-border-radius);
+  padding: 6px 10px;
   font-size: 18px;
 }

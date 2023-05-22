@@ -6,7 +6,8 @@
   --var-border-radius-lg: 8px;
   --var-accent-color: #088877b8;
   --var-accent-color-active: #067457b8;
-  --var-accent-color-alt: #6f216a;
+  --var-accent-color-alt: #c11cb6;
+  --var-accent-color-bg: 240, 98, 230;
 }
 
 html {
@@ -49,6 +50,24 @@ h3 {
 
 p {
   font-size: 1.1rem;
+}
+
+a:not(.a-btn) {
+  text-decoration: none;
+  color: var(--var-accent-color-alt);
+  transition: all 0.24s;
+  outline: 2px solid transparent;
+}
+
+a:not(.a-btn):hover, a:not(.a-btn):focus-visible {
+  text-decoration: underline;
+  background: rgba(var(--var-accent-color-bg), 0.08);
+  outline: 4px solid rgba(var(--var-accent-color-bg), 0.08);
+}
+
+a:not(.a-btn):active {
+  background: rgba(var(--var-accent-color-bg), 0.18);
+  outline: 4px solid rgba(var(--var-accent-color-bg), 0.18);
 }
 
 hr {
