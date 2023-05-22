@@ -3,11 +3,35 @@
   border-radius: var(--var-border-radius);
 }
 
-#div-events-inner div {
+#div-events-inner > div {
   border-radius: var(--var-border-radius);
   border: 1px solid #000;
   margin: 6px 0;
   padding: 4px;
+  position: relative;
+}
+
+.landing-event-bg {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.24;
+  transition: opacity 0.24s;
+}
+
+#div-events-inner > div:hover:not(#div-loading) {
+  cursor: pointer;
+}
+
+#div-events-inner > div:hover .landing-event-bg, #div-events-inner > div:focus-visible .landing-event-bg {
+  opacity: 0.48;
+}
+
+#div-events-inner > div:active .landing-event-bg {
+  opacity: 0.72;
 }
 
 #div-social-wrapper {

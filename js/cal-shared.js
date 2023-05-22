@@ -4,6 +4,34 @@ function formatDesc(input) {
   return input.replace(/<a.*?>/g, '[url]').replace(/<\/a>/g, '[/url]').replace(/<.+?>/g, s => `{${s.slice(1, s.length-1)}}`) + `[br][br][i](This event does not sync with the official oSTEM@Mines calendar. Visit the [url]https://go.itsrem.org/ostem/hub|oSTEM Hub[/url] for the latest information.)[/i]`;
 }
 
+export function colorMap(n) {
+  switch (parseInt(n)) {
+    case 7: 
+      return {
+        name: 'Recurring Meeting',
+        icon: 'event_repeat',
+        css: 'var(--color-meeting)'
+      }
+    case 4: 
+      return {
+        name: 'Booth',
+        icon: 'storefront',
+        css: 'var(--color-booth)'
+      }
+    case 2: 
+      return {
+        name: 'Big Event',
+        icon: 'local_activity',
+        css: 'var(--color-event)'
+      }
+    default: 
+      return {
+        name: 'Important Dates',
+        css: 'var(--color-misc)'
+      }
+  }
+}
+
 export function formatDate(start, end, allDay, shortForm=false) {
   console.log(start, end);
   if (allDay) {
@@ -15,6 +43,8 @@ export function formatDate(start, end, allDay, shortForm=false) {
 }
 
 export function showEvent(event) {
+  if (typeof event.start === 'string') event.start = new Date(event.start);
+  if (typeof event.end === 'string') event.end = new Date(event.end);
   import('/js/popup.js')
     .then((module) => {
       module.create(`<h1>${event.title}</h1><p><span class='p2'>${formatDate(event.start, event.end, event.allDay)}</span></p><hr/><p id='_tmp_cal_eventDesc'></p><div><button id='_rem-popup-dismiss' class='right'>Done</button><button id='_rem-popup-addToCal' class='_rem-popup-action'><span class='material-symbols-rounded' style='vertical-align: text-top'>calendar_add_on</span> Add Event to Calendar</button></div>`);
@@ -42,6 +72,6 @@ export function showEvent(event) {
       document.getElementById('_tmp_cal_eventDesc').removeAttribute('id');
     })
     .catch((err) => {
-      alert(err.message);
+      throw err;
     });
 }

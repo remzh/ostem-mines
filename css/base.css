@@ -8,6 +8,12 @@
   --var-accent-color-active: #067457b8;
   --var-accent-color-alt: #c11cb6;
   --var-accent-color-bg: 240, 98, 230;
+
+  /* Event colors */
+  --color-meeting: #039be5;
+  --color-event: #33b679;
+  --color-booth: #e67c73;
+  --color-misc: #9e69af;
 }
 
 html {

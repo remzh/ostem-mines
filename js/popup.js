@@ -1,8 +1,14 @@
-document.addEventListener('DOMContentLoaded', () => {
+function loaded() {
   document.head.insertAdjacentHTML('beforeend', `<link rel='stylesheet' href='css/_rem-popup.css'/>`);
   document.body.insertAdjacentHTML('beforeend', `<div id='_rem-popup-ov' class='hidden'><div id='_rem-popup-ov-inner'></div><div id='_rem-popup-content'></div></div>`);
   document.getElementById('_rem-popup-ov-inner').addEventListener('click', dismiss);
-});
+}
+
+if (document.readyState !== 'loading') {
+  loaded(); 
+} else {
+  document.addEventListener('DOMContentLoaded', loaded);
+}
 
 export function create(html) {
   document.getElementById('_rem-popup-ov').style.display = 'block';
