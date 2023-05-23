@@ -35,7 +35,7 @@
   display: none;
 }
 
-#_rem-popup-content {
+#_rem-popup-content-outer {
   z-index: 802;
   position: relative;
   margin: auto;
@@ -48,9 +48,18 @@
   box-shadow: 2px 2px 8px #222;
 }
 
-#_rem-popup-dismiss, ._rem-popup-action {
+#_rem-popup-footer {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#_rem-popup-dismiss-int, #_rem-popup-dismiss, ._rem-popup-action {
   margin: 12px 0 4px;
   border-radius: var(--var-border-radius);
   padding: 6px 10px;
   font-size: 18px;
+}
+
+.popup-template {
+  display: none;
 }

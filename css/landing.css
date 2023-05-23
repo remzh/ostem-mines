@@ -107,6 +107,11 @@
   margin-top: 8px;
 }
 
+.icon-explainer {
+  font-size: 26px;
+  vertical-align: text-bottom;
+}
+
 #div-footer {
   padding: 12px 0;
 }

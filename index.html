@@ -19,7 +19,7 @@
           <p><span class='icon-spin material-symbols-rounded'>cached</span> Loading upcoming events...</p>
         </div>
       </div>
-      <a class='a-btn' href='calendar.html'>Full Event Calendar</a> <a class='a-btn right' href='#'>Icon Guide</a>
+      <a class='a-btn' href='calendar.html'>Full Event Calendar</a> <a class='a-btn right popup-trigger' data-target='iconGuide' href='#'>Icon Guide</a>
     </div>
     <h2>Stay Connected</h2>
     <div id='div-social-wrapper' class='div-flex'>
@@ -33,8 +33,27 @@
       <a class='a-link a-btn' role='button' href='https://go.itsrem.org/ostem/spark'><span class='icon-link material-symbols-rounded'>book</span> <span>Spectrum Spark</span></a>
     </div>
     <div id='div-footer'>
-      <p>oSTEM @ Mines <span class='right'><a href='#'>Accessibility</a> &ThickSpace; <a href='#'>About</a></span></p>
+      <p>oSTEM @ Mines <span class='right'><a href='#'>Accessibility</a> &ThickSpace; <a href='#' class='popup-trigger' data-target='about'>About</a></span></p>
     </div>
+  </div>
+  <div id='_popup-iconGuide' class='popup-template'>
+    <div id='landing-iconGuide'>
+      <h1>Icon Guide</h1>
+      <h3><span class='material-symbols-rounded icon-explainer'>restaurant</span> Free Food</h3>
+      <p>Free food will be provided at this event. In most cases, you will have to RSVP ahead of time in order to guarantee food.</p>
+      <h3><span class='material-symbols-rounded icon-explainer'>local_activity</span> Big Event</h3>
+      <p>A larger, typically more involved oSTEM event that occurs no more than twice per semester.</p>
+      <h3><span class='material-symbols-rounded icon-explainer'>event_repeat</span> Recurring Meeting</h3>
+      <p>A low stakes, regularly scheduled oSTEM meeting. Recurring meetings generally occur once a week and are a great way to meet new people! RSVPs are not needed for recurring meetings (but may be required for food).</p>
+      <h3><span class='material-symbols-rounded icon-explainer'>storefront</span> Booth</h3>
+      <p>We'll be tabling somewhere on campus, and we encourage you to volunteer some time with us if you can!</p>
+    </div>
+  </div>
+  <div id='_popup-about' class='popup-template'>
+    <h1>About</h1>
+    <p><b>oSTEM@Mines Hub</b></p>
+    <p>The oSTEM@Mines Hub is your one stop shop for everything related to oSTEM at Mines! From this page, you can see what events are upcoming, socials to stay in touch with the oSTEM community, and general links that are important and relevant to the organization.</p>
+    <p><br>&copy; 2023 Rem Zhang</p>
   </div>
 </body>
 </html>

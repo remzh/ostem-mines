@@ -33,7 +33,6 @@ export function colorMap(n) {
 }
 
 export function formatDate(start, end, allDay, shortForm=false) {
-  console.log(start, end);
   if (allDay) {
     return new Intl.DateTimeFormat(!1, {weekday: 'short', month: shortForm ? 'short':'long', day: 'numeric'}).formatRange(start, end - 1);
   } else {

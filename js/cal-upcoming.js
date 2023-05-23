@@ -13,7 +13,6 @@ function getIcons(event) {
 }
 
 function handleEleClick(ind) {
-  console.log(_eventArray[ind]);
   showEvent(_eventArray[ind]);
 }
 
@@ -33,7 +32,7 @@ export async function loadCal () {
       let cm = colorMap(r.color);
       return `<div class='landing-event' tabindex='0' data-eventind='${i}'>
       <div class='landing-event-bg' style='background: ${cm.css}'></div>
-      <p class='p2'>${r.title} ${cm.icon?`<span class='icon-event material-symbols-rounded right'>${cm.icon}</span>`:''}${getIcons(r)}</p>
+      <p class='p2'>${r.title} ${cm.icon?`<span class='icon-event material-symbols-rounded right' title='${cm.name}'>${cm.icon}</span>`:''}${getIcons(r)}</p>
       <p><span>${formatDate(new Date(r.start), new Date(r.end), r.allDay, 1)}</span> <span class='right'>${r.loc}</span></p>
     </div>`;
     }).join('')}`;
