@@ -21,7 +21,7 @@ export function colorMap(n) {
     case 2: 
       return {
         name: 'Big Event',
-        icon: 'local_activity',
+        icon: 'award_star',
         css: 'var(--color-event)'
       }
     default: 

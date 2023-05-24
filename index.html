@@ -14,12 +14,18 @@
     <h2>Upcoming Events</h2>
     <p><i>Select an event for details and RSVP links.</i></p>
     <div id='div-events'>
-      <div id='div-events-inner'>
-        <div id='div-loading'>
+      <div id='div-events-inner' class='div-events-wrapper'>
+        <div class='div-loading'>
           <p><span class='icon-spin material-symbols-rounded'>cached</span> Loading upcoming events...</p>
         </div>
       </div>
-      <a class='a-btn' href='calendar.html'>Full Event Calendar</a> <a class='a-btn right popup-trigger' data-target='iconGuide' href='#'>Icon Guide</a>
+      <h2>Upcoming Recurring Meetings</h2>
+      <div id='div-events-recur-inner' class='div-events-wrapper'>
+        <div class='div-loading'>
+          <p><span class='icon-spin material-symbols-rounded'>cached</span> Loading upcoming meetings...</p>
+        </div>
+      </div>
+      <a class='a-btn' href='calendar.html'>Full Calendar</a> <a class='a-btn right popup-trigger' data-target='iconGuide' href='#'>Icon Guide</a>
     </div>
     <h2>Stay Connected</h2>
     <div id='div-social-wrapper' class='div-flex'>
@@ -33,7 +39,7 @@
       <a class='a-link a-btn' role='button' href='https://go.itsrem.org/ostem/spark'><span class='icon-link material-symbols-rounded'>book</span> <span>Spectrum Spark</span></a>
     </div>
     <div id='div-footer'>
-      <p>oSTEM @ Mines <span class='right'><a href='#'>Accessibility</a> &ThickSpace; <a href='#' class='popup-trigger' data-target='about'>About</a></span></p>
+      <p>oSTEM @ Mines <span class='right'><a href='#' class='popup-trigger' data-target='accessibility'>Accessibility</a> &ThickSpace; <a href='#' class='popup-trigger' data-target='about'>About</a></span></p>
     </div>
   </div>
   <div id='_popup-iconGuide' class='popup-template'>
@@ -41,8 +47,10 @@
       <h1>Icon Guide</h1>
       <h3><span class='material-symbols-rounded icon-explainer'>restaurant</span> Free Food</h3>
       <p>Free food will be provided at this event. In most cases, you will have to RSVP ahead of time in order to guarantee food.</p>
-      <h3><span class='material-symbols-rounded icon-explainer'>local_activity</span> Big Event</h3>
-      <p>A larger, typically more involved oSTEM event that occurs no more than twice per semester.</p>
+      <h3><span class='material-symbols-rounded icon-explainer'>confirmation_number</span> RSVP / Application Required</h3>
+      <p>This event requires you to RSVP and/or apply for in advance. Walk-ins will not be allowed.</p>
+      <h3><span class='material-symbols-rounded icon-explainer'>award_star</span> Big Event</h3>
+      <p>A larger, typically more involved oSTEM event that occurs no more than twice per semester. If you only have time for a couple of things, try to prioritize these!</p>
       <h3><span class='material-symbols-rounded icon-explainer'>event_repeat</span> Recurring Meeting</h3>
       <p>A low stakes, regularly scheduled oSTEM meeting. Recurring meetings generally occur once a week and are a great way to meet new people! RSVPs are not needed for recurring meetings (but may be required for food).</p>
       <h3><span class='material-symbols-rounded icon-explainer'>storefront</span> Booth</h3>
@@ -54,6 +62,17 @@
     <p><b>oSTEM@Mines Hub</b></p>
     <p>The oSTEM@Mines Hub is your one stop shop for everything related to oSTEM at Mines! From this page, you can see what events are upcoming, socials to stay in touch with the oSTEM community, and general links that are important and relevant to the organization.</p>
     <p><br>&copy; 2023 Rem Zhang</p>
+  </div>
+  <div id='_popup-accessibility' class='popup-template'>
+    <h1>Accessibility</h1>
+    <p>
+      Mines welcomes individuals with disabilities. If you require an accommodation in order to participate in our events, please contact Rem Zhang at least <b>three business days prior to an event</b> at <a id='_email-obf'>[JavaScript must be enabled to reveal this address]</a>. Advance notice may be necessary to arrange for some accessibility needs.
+    </p>
+    <script type='module'>
+      let _em = 'cmVtX3poYW' + (2 + 3) + 'nQG1pbmVzLmVkdQ';
+      document.getElementById('_email-obf').innerText = atob(_em);
+      document.getElementById('_email-obf').href = `mailto:${atob(_em)}`;
+    </script>
   </div>
 </body>
 </html>

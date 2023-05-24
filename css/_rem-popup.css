@@ -48,6 +48,15 @@
   box-shadow: 2px 2px 8px #222;
 }
 
+#_rem-popup-content {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+#_rem-popup-content h1, h2, h3 {
+  margin-top: 8px;
+}
+
 #_rem-popup-footer {
   display: flex;
   flex-direction: row-reverse;

@@ -3,12 +3,14 @@
   border-radius: var(--var-border-radius);
 }
 
-#div-events-inner > div {
+#div-events > div > div {
   border-radius: var(--var-border-radius);
   border: 1px solid #000;
   margin: 6px 0;
   padding: 4px;
   position: relative;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .landing-event-bg {
@@ -22,15 +24,15 @@
   transition: opacity 0.24s;
 }
 
-#div-events-inner > div:hover:not(#div-loading) {
+.div-events-wrapper > div:hover:not(.div-loading) {
   cursor: pointer;
 }
 
-#div-events-inner > div:hover .landing-event-bg, #div-events-inner > div:focus-visible .landing-event-bg {
+.div-events-wrapper > div:hover .landing-event-bg, .div-events-wrapper > div:focus-visible .landing-event-bg {
   opacity: 0.48;
 }
 
-#div-events-inner > div:active .landing-event-bg {
+.div-events-wrapper > div:active .landing-event-bg {
   opacity: 0.72;
 }
 
