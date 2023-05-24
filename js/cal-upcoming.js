@@ -36,8 +36,6 @@ export async function loadCal () {
     return;
   });
 
-  // console.log(eventInfo);
-
   let eventInfo = allEventInfo.filter(r => colorMap(r.color).name !== 'Recurring Meeting').slice(0, 3);
   let meetingInfo = allEventInfo.filter(r => colorMap(r.color).name === 'Recurring Meeting').slice(0, 2);
 

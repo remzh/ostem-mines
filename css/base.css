@@ -70,6 +70,7 @@ a:not(.a-btn) {
 }
 
 a:not(.a-btn):hover, a:not(.a-btn):focus-visible {
+  cursor: pointer;
   text-decoration: underline;
   background: rgba(var(--var-accent-color-bg), 0.08);
   outline: 4px solid rgba(var(--var-accent-color-bg), 0.08);

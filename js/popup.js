@@ -28,7 +28,8 @@ if (document.readyState !== 'loading') {
 }
 
 function initTrigger(ele, target) {
-  ele.addEventListener('click', () => {
+  ele.addEventListener('click', e => {
+    e.preventDefault();
     let source = document.getElementById(`_popup-${target}`);
     popupSourceEle = source;
     create(source.innerHTML, true);
