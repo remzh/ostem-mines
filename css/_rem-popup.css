@@ -39,7 +39,7 @@
   z-index: 802;
   position: relative;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 5vh;
   width: 85%;
   max-width: 800px;
   background: #fff;
@@ -53,7 +53,7 @@
   overflow-y: auto;
 }
 
-#_rem-popup-content h1, h2, h3 {
+#_rem-popup-content h1, #_rem-popup-content h2, #_rem-popup-content h3 {
   margin-top: 8px;
 }
 
@@ -71,4 +71,10 @@
 
 .popup-template {
   display: none;
+}
+
+@media screen and (min-width: 820px) {
+  #_rem-popup-content-outer {
+    margin-top: 10vh;
+  }
 }

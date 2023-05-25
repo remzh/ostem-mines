@@ -26,7 +26,7 @@ export function colorMap(n) {
       }
     default: 
       return {
-        name: 'Important Dates',
+        name: 'Significant Dates',
         css: 'var(--color-misc)'
       }
   }
@@ -46,7 +46,10 @@ export function showEvent(event) {
   if (typeof event.end === 'string') event.end = new Date(event.end);
   import('/js/popup.js')
     .then((module) => {
-      module.create(`<h1>${event.title}</h1><p><span class='p2'>${formatDate(event.start, event.end, event.allDay)}</span></p><hr/><p id='_tmp_cal_eventDesc'></p><div><button id='_rem-popup-dismiss' class='right'>Done</button><button id='_rem-popup-addToCal' class='_rem-popup-action'><span class='material-symbols-rounded' style='vertical-align: text-top'>calendar_add_on</span> Add Event to Calendar</button></div>`);
+      let cm = colorMap(event.color);
+      let tags = `<div class='_popup-cal-tag' style='background: ${cm.css}'>${cm.icon ? `<span class='material-symbols-rounded'>${cm.icon}</span>`:''}${cm.name}</div>`;
+      if (event.loc) tags += `<div class='_popup-cal-tag' style='background: var(--var-accent-color)'><span class='material-symbols-rounded'>pin_drop</span> ${event.loc}</div>`;
+      module.create(`<h1>${event.title}</h1><p><span class='p2'>${formatDate(event.start, event.end, event.allDay)}</span></p>${tags}<hr/><p id='_tmp_cal_eventDesc'></p><div><button id='_rem-popup-dismiss' class='right'>Done</button><button id='_rem-popup-addToCal' class='_rem-popup-action'><span class='material-symbols-rounded' style='vertical-align: text-top'>calendar_add_on</span> Add Event to Calendar</button></div>`);
 
       let calConfig = {
         timeZone: 'America/Denver',

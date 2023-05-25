@@ -24,11 +24,8 @@
 #a-calendar-back {
   border: none;
   width: 32px;
-  margin-left: -8px;
   margin-bottom: -2px;
-  padding-left: 6px;
   padding-bottom: 4px;
-  border-top-left-radius: var(--var-border-radius-lg);
 }
 
 #a-calendar-back span {
@@ -38,21 +35,28 @@
 
 #btn-calendar-sub {
   border: none;
-  /* width: 180px; */
-  margin-right: -8px;
-  margin-bottom: -2px;
-  padding: 0 8px 6px;
-  border-top-right-radius: var(--var-border-radius-lg);
   font-size: 20px;
-  /* border-bottom: 1px solid #000;
-  border-left: 1px solid #000; */
 }
 
 #btn-calendar-sub span {
-  font-size: 26px;
+  font-size: 24px;
   vertical-align: text-bottom;
 }
 
 #div-calendar {
   margin-top: 12px;
+}
+
+@media screen and (min-width: 820px) {
+  #a-calendar-back {
+    margin-left: -8px;
+    padding-left: 6px;
+    border-top-left-radius: var(--var-border-radius-lg);
+  }
+  #btn-calendar-sub {
+    margin-right: -8px;
+    margin-bottom: -2px;
+    padding: 0 8px 6px;
+    border-top-right-radius: var(--var-border-radius-lg);
+  }
 }

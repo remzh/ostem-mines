@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async function() {
   document.getElementsByClassName('div-loading')[0].style.display = 'none';
   var calendarEl = document.getElementById('div-calendar');
   var calendar = new FullCalendar.Calendar(calendarEl, {
-    initialView: 'listMonth',
+    initialView: window.innerWidth > 800 ? 'dayGridMonth' : 'listMonth',
     events: eventInfo,
     headerToolbar: {
       left: 'prev,next',

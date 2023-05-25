@@ -44,7 +44,7 @@ h1 {
 }
 
 h2 {
-  margin-top: 0.4rem;
+  padding-top: 0.4rem;
   margin-bottom: 0.2rem;
   font-size: 1.5rem;
 }
@@ -183,9 +183,30 @@ button:not(:disabled):active, .a-btn:active {
   display: none;
 }
 
+._popup-cal-tag {
+  display: inline-block;
+  color: #fff;
+  margin-top: 6px;
+  margin-right: 4px;
+  padding: 4px 6px;
+  border-radius: var(--var-border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+._popup-cal-tag span {
+  font-size: 1.25rem;
+  padding: 0 4px 1px 0;
+  vertical-align: text-bottom;
+}
+
 @media screen and (min-width: 820px) {
   #div-outer {
     margin: 20px auto;
     border-radius: var(--var-border-radius-lg);
   } 
+  h2 {
+    margin-top: 0.4rem;
+    padding-top: 0;
+  }
 }
