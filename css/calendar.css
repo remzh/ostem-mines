@@ -60,3 +60,23 @@
     border-top-right-radius: var(--var-border-radius-lg);
   }
 }
+
+@media screen and (max-width: 819px) {
+  #div-outer {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+  }
+
+  #div-calendar {
+    /* border: 1px solid #000; */
+    height: 100%;
+    margin-bottom: 10px;
+  }
+
+  .fc .fc-toolbar-title {
+    text-align: center;
+    font-size: 1.4em;
+    padding: 0px 10px;
+  }
+}

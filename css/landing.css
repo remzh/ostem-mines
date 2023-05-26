@@ -1,3 +1,9 @@
+#img-header {
+  max-width: 50%;
+  max-height: 80px;
+  float: right;
+}
+
 #div-events > a {
   padding: 4px 6px;
   border-radius: var(--var-border-radius);
@@ -116,4 +122,16 @@
 
 #div-footer {
   padding: 12px 0;
+}
+
+@media screen and (max-width: 580px) {
+  #img-header {
+    display: block;
+    float: none;
+    margin: auto;
+  }
+
+  #div-header {
+    text-align: center;
+  }
 }

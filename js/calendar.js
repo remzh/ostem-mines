@@ -1,5 +1,23 @@
-import { showEvent } from './cal-shared.js';
+import { showEvent, colorMap } from './cal-shared.js';
 import { atcb_action } from './add-to-calendar.js';
+
+function markupEvents(eventInfo) {
+  return eventInfo.map(r => {
+    let {title, start, end, desc, loc, allDay} = r;
+    let cm = colorMap(r.color);
+    return {
+      title,
+      start,
+      end,
+      allDay,
+      color: cm.css,
+      // Custom props
+      colorInternal: r.color,
+      desc,
+      loc
+    };
+  })
+}
 
 document.addEventListener('DOMContentLoaded', async function() {
   let eventInfo = await fetch('https://script.google.com/macros/s/AKfycbwgJlfDVGs_8gIzpW6Qy0umvs3xe42jazp2uASmbM1cvYmeG1et69Ak3pulqAb4zf7u/exec').then(r => r.json());
@@ -8,7 +26,7 @@ document.addEventListener('DOMContentLoaded', async function() {
   var calendarEl = document.getElementById('div-calendar');
   var calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: window.innerWidth > 800 ? 'dayGridMonth' : 'listMonth',
-    events: eventInfo,
+    events: markupEvents(eventInfo),
     headerToolbar: {
       left: 'prev,next',
       center: 'title',
@@ -17,13 +35,14 @@ document.addEventListener('DOMContentLoaded', async function() {
     eventClick: function(info) {
       console.log(info);
       let {title, start, end, allDay} = info.event;
-      let {desc, loc} = info.event.extendedProps;
+      let {desc, loc, colorInternal} = info.event.extendedProps;
       showEvent({
         title, 
         start,
         end,
         desc,
         loc,
+        color: colorInternal,
         allDay
       });
     }  
